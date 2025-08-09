@@ -1,0 +1,30 @@
+$coul-black: #0D0D0D;
+$coul-red: #8A0303;
+$coul-blue: #1A2A40;
+$coul-grey: #B0B0B0;
+$coul-green: #2F4F2F;
+
+@font-face {
+  font-family: "friday";
+  src: url("/fonts/Friday13v12.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+    background-color: $coul-black;
+    color: white;
+}
+
+header {
+    border-bottom: 1px solid $coul-grey;
+}
+
+header a {
+    font-family: "friday", sans-serif;
+}
+
+footer {
+    width: 1280px;
+    display: block;
+}
