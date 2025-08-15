@@ -17,7 +17,28 @@ header a {
   font-family: "friday", sans-serif;
 }
 
-footer {
+main {
   width: 1280px;
+  margin: auto;
+}
+
+footer {
+  width: 1500px;
   display: block;
+}
+
+h1 {
+  font-family: "friday", sans-serif;
+}
+
+.card {
+  background-color: #8A0303;
+}
+
+.card h3 {
+  color: #0D0D0D;
+}
+
+.card p {
+  color: #B0B0B0;
 }/*# sourceMappingURL=style.css.map */

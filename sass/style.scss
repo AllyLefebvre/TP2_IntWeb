@@ -24,7 +24,29 @@ header a {
     font-family: "friday", sans-serif;
 }
 
-footer {
+main {
     width: 1280px;
+    margin: auto;
+}
+
+footer {
+    width: 1500px;
     display: block;
+}
+
+h1 {
+    font-family: "friday", sans-serif;
+}
+
+.card {
+    background-color: $coul-red;
+
+}
+
+.card h3 {
+    color: $coul-black;
+}
+
+.card p {
+    color: $coul-grey;
 }
