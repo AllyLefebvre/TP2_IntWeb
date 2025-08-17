@@ -1,306 +1,482 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TP2</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="sass/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="h-20 flex justify-between items-center">
-        <div>
-            <img class="max-h-30" src="images/Friday_the_13th_1980.png" alt="logo friday the 13th" />
-        </div>
-        <div class="p-3">
-            <a href="index.html" class="p-4">Accueil</a>
-            <a href="tournage.html" class="p-4">Tournage</a>
-        </div>
+      <div>
+        <img
+          class="max-h-30"
+          src="images/Friday_the_13th_1980.png"
+          alt="logo friday the 13th"
+        />
+      </div>
+      <div class="p-3">
+        <a href="index.html" class="p-4">Accueil</a>
+        <a href="tournage.html" class="p-4">Tournage</a>
+      </div>
     </header>
-    <main class="space-y-40">
-        <section class="container mx-auto px-4 py-8">
-            <div class="flex justify-around items-center">
-                <div class="space-y-4">
-                    <h1 class="text-3xl font-bold">Presentation de l'oeuvre</h1>
-                    <p class="w-120 text-xl">Le film débute le samedi 13 juillet 1957. Un jeune garçon nommé Jason Voorhees
-                        meurt noyé au camp
-                        de
-                        Crystal Lake. L'année suivante, deux moniteurs sont également tués. À la suite de ces
-                        événements, le
-                        camp reste abandonné. En 1979, Steve Christy décide de le rouvrir un mercredi 13 juin, jour
-                        anniversaire des décès survenus vingt et un an auparavant. Lors de la préparation du camp pour
-                        l'été, les moniteurs employés par Christy commencent à disparaître les uns après les autres
-                        pendant
-                        la nuit. En effet, le même tueur qui a sévi en 1958 est de retour pour une justice sanglante</p>
-                    <div class="flex justify-between">
-                        <input class="border-white" type="number">
-                        <button class="relative px-8 py-4 bg-red-700 text-white font-bold text-lg rounded-md 
-                 shadow-lg shadow-red-900 overflow-hidden group">
-                            Acheter
+    <main class="mx-auto max-w-9/12 p-4">
+      <section class="mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <div class="space-y-4 w-full lg:w-1/2">
+            <h1 class="text-3xl font-bold">Presentation de l'oeuvre</h1>
 
-                            <span class="absolute top-full left-6 w-2 h-6 bg-red-700 rounded-b-full 
-                 group-hover:animate-[drip_1s_ease-in-out_infinite]"></span>
+            <p class="text-lg">
+              Le film débute le samedi 13 juillet 1957. Un jeune garçon nommé
+              Jason Voorhees meurt noyé au camp de Crystal Lake. L'année
+              suivante, deux moniteurs sont également tués. À la suite de ces
+              événements, le camp reste abandonné. En 1979, Steve Christy décide
+              de le rouvrir un mercredi 13 juin, jour anniversaire des décès
+              survenus vingt et un an auparavant. Lors de la préparation du camp
+              pour l'été, les moniteurs employés par Christy commencent à
+              disparaître les uns après les autres pendant la nuit. En effet, le
+              même tueur qui a sévi en 1958 est de retour pour une justice
+              sanglante.
+            </p>
 
-                            <span class="absolute top-full left-12 w-1.5 h-4 bg-red-800 rounded-b-full 
-                 group-hover:animate-[drip_1.2s_ease-in-out_infinite]"></span>
+            <div class="flex gap-3">
+              <input
+                class="flex-1 border border-white text-white bg-transparent p-2 rounded"
+                type="number"
+                placeholder="Qte"
+              />
+              <button class="px-6 py-2 bg-red-700 text-white font-bold rounded">
+                Acheter
+              </button>
+            </div>
+          </div>
+          <div
+            id="default-carousel"
+            class="relative w-full"
+            data-carousel="slide"
+          >
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="images/battle.png"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="images/boat.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="images/jason.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div
+              class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+            >
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="0"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 2"
+                data-carousel-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 3"
+                data-carousel-slide-to="2"
+              ></button>
+            </div>
+            <button
+              type="button"
+              class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <hr class="mb-20 mt-20" />
+      <section class="container mx-auto px-4 py-8 space-y-10 text-center">
+        <div class="space-y-4">
+          <h1 class="text-3xl font-bold">Images et extraits</h1>
+          <p class="text-lg md:text-xl">
+            Voici quelques images du premier opus de Vendredi 13 de 1980.
+          </p>
 
-                            <span class="absolute top-full left-20 w-1 h-3 bg-red-600 rounded-b-full 
-                 group-hover:animate-[drip_0.8s_ease-in-out_infinite]"></span>
-                        </button>
-                    </div>
+          <div class="flex flex-col sm:flex-row justify-center gap-3">
+            <input
+              class="border border-white text-white bg-transparent p-2 rounded"
+              type="email"
+              placeholder="Votre email"
+            />
+            <button class="px-6 py-2 bg-red-700 text-white font-bold rounded">
+              S'abonner
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <img
+            class="w-full h-64 object-cover rounded"
+            src="images/battle.png"
+            alt="La mère de Jason avec une campeuse"
+          />
+          <img
+            class="w-full h-64 object-cover rounded"
+            src="images/axe.jpg"
+            alt="Maquillage pour les effets spéciaux"
+          />
+          <img
+            class="w-full h-64 object-cover rounded"
+            src="images/boat.jpg"
+            alt="Le retour de Jason"
+          />
+        </div>
+        <div class="aspect-video max-w-4xl mx-auto">
+          <iframe
+            class="w-full h-full rounded"
+            src="https://www.youtube.com/embed/aDrOvFtzyPQ?si=uqelce0mecn9O93R"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
-                </div>
-                <div>
-                    <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                        <!-- Wrapper -->
-                        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="images/wallpaper.jpg"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="images/jason.jpg"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                            </div>
-                        </div>
+      <hr class="mb-20 mt-20" />
+      <section>
+        <div class="max-w-3xl mx-auto space-y-4 px-4">
+          <h1 class="text-2xl md:text-3xl font-bold">
+            Presentation des acteurs et producteurs
+          </h1>
+          <p class="text-base md:text-lg">
+            Ce film culte de 1980 a réuni des acteurs marquants et une équipe
+            créative visionnaire. Devant la caméra, ils ont donné vie aux
+            personnages emblématiques du camp Crystal Lake, tandis qu’en
+            coulisses, les producteurs, scénaristes, musiciens et techniciens
+            ont façonné l’univers sombre et inquiétant qui a lancé la saga
+            Vendredi 13.
+          </p>
+        </div>
 
-                        <!-- Indicateurs -->
-                        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-                            <button type="button" class="w-3 h-3 rounded-full" data-carousel-slide-to="0"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" data-carousel-slide-to="1"></button>
-                        </div>
+        <div>
+          <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/Betsy_p.webp"
+                alt="Betsy Palmer"
+              />
+              <h3 class="font-bold text-xl text-gray-900">Betsy Palmer</h3>
+              <p class="text-gray-500">Pamela Voorhees (actrice)</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Antagoniste du film, mère vengeresse de Jason. Son rôle
+                fondateur marque le mythe de Crystal Lake.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/alice.webp"
+                alt="Adrienne King"
+              />
+              <h3 class="mt-4 text-xl font-bold text-gray-900">
+                Adrienne King
+              </h3>
+              <p class="text-gray-500">Alice Hardy (actrice)</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Héroïne et “final girl” iconique, elle incarne la résilience
+                face à la menace.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/kevin.jpg"
+                alt="Kevin Bacon"
+              />
+              <h3 class="mt-4 text-xl font-bold text-gray-900">Kevin Bacon</h3>
+              <p class="text-gray-500">Jack Burrell (acteur)</p>
+              <p class="mt-2 text-sm text-gray-600">
+                L’un des moniteurs de Crystal Lake, célèbre pour une scène de
+                meurtre marquante.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/Bill_29.webp"
+                alt="Harry Crosby"
+              />
+              <h3 class="mt-4 text-xl font-bold text-gray-900">Harry Crosby</h3>
+              <p class="text-gray-500">Bill (acteur)</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Moniteur du camp, il participe à l’atmosphère anxiogène et au
+                crescendo horrifique.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/sean.webp"
+                alt="Sean S. Cunningham"
+              />
+              <h3 class="mt-4 text-xl font-bold text-gray-900">
+                Sean S. Cunningham
+              </h3>
+              <p class="text-gray-500">Réalisateur & Producteur</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Chef d’orchestre du projet, il rassemble l’équipe et donne le
+                ton de la franchise.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/victor.jpg"
+                alt="Victor Miller"
+              />
+              <h3 class="mt-4 text-xl font-bold text-gray-900">
+                Victor Miller
+              </h3>
+              <p class="text-gray-500">Scénariste</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Imagine une vengeance maternelle tragique qui ancre l’horreur
+                dans le drame.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/harry.jpg"
+                alt="Harry Manfredini"
+              />
+              <h3 class="mt-4 text-xl font-bold text-gray-900">
+                Harry Manfredini
+              </h3>
+              <p class="text-gray-500">Compositeur</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Signe la partition et le motif culte “ki ki ki, ma ma ma” devenu
+                emblème sonore.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div
+              class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6"
+            >
+              <img
+                class="w-32 h-32 mx-auto rounded-lg object-cover"
+                src="images/tom.jpg"
+                alt="Tom Savini"
+              />
+              <h3 class="mt-4 text-xl font-bold text-gray-900">Tom Savini</h3>
+              <p class="text-gray-500">Effets spéciaux maquillages</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Maître du gore réaliste, ses trucages choquent et marquent
+                durablement le public.
+              </p>
+              <div class="flex justify-center space-x-4 mt-4 text-black">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="mb-20 mt-20" />
+      <section class="container mx-auto px-4 py-8 space-y-12">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+          <img
+            class="w-full md:w-1/2 rounded object-cover"
+            src="images/scene1.jpeg"
+            alt="Scene 1"
+          />
+          <p class="text-base md:text-lg w-full md:w-1/2">
+            On voit l’iconique tueur masqué surgir dans l’ombre, saisissant sa
+            proie par la tête. La victime, terrifiée, tente de se débattre mais
+            le masque de hockey, désormais indissociable de la saga, annonce une
+            mort brutale imminente. Cette image illustre parfaitement la terreur
+            sourde et implacable qui caractérise Vendredi 13.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:flex-row-reverse flex items-center gap-6 md:gap-12"
+        >
+          <img
+            class="w-full md:w-1/2 rounded object-cover"
+            src="images/scene2.webp"
+            alt="Scene 2"
+          />
+          <p class="text-xl">
+            Un moniteur du camp est empalé contre la façade d’une cabane,
+            transpercé de flèches. Le contraste entre l’environnement banal du
+            camp et la violence extrême de l’attaque choque le spectateur. C’est
+            une démonstration du réalisme sanglant des effets spéciaux de Tom
+            Savini, qui a marqué durablement le cinéma d’horreur.
+          </p>
+        </div>
 
-                        <!-- Contrôles -->
-                        <button type="button"
-                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4"
-                            data-carousel-prev>
-                            ←
-                        </button>
-                        <button type="button"
-                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4"
-                            data-carousel-next>
-                            →
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <hr class="mb-20" />
-        <section class="container mx-auto px-4 py-8 space-y-10 text-center">
-            <div class="space-y-4">
-                <h1 class="text-3xl font-bold">Images et extraits</h1>
-                <p class="text-xl">Voici quelques images du premier opus de Vendredi 13 de 1980.</p>
-                <div>
-                    <input type="email">
-                    <button>S'abonner</button>
-                </div>
-            </div>
-            <div class="flex justify-center gap-5">
-                <img class="w-100 h-80 object-cover rounded" src="images/battle.png"
-                    alt="La mere de Jason avec une campeuse">
-                <img class="w-100 h-80 object-cover rounded" src="images/axe.jpg"
-                    alt="Maquillage pour les effets speciaux">
-                <img class="w-100 h-80 object-cover rounded" src="images/boat.jpg" alt="Le retour de Jason">
-            </div>
-            <div class="mx-auto">
-                <iframe class="mx-auto" width="560" height="315"
-                    src="https://www.youtube.com/embed/aDrOvFtzyPQ?si=uqelce0mecn9O93R" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-        <hr class="mb-20" />
-        <section>
-            <div class="w-150 space-y-4">
-                <h1 class="text-3xl font-bold">Presentation des acteurs et producteurs</h1>
-                <p class="text-xl">Ce film culte de 1980 a réuni des acteurs marquants et une équipe créative visionnaire.
-                    Devant la caméra, ils ont donné vie aux personnages emblématiques du camp Crystal Lake,
-                    tandis qu’en coulisses, les producteurs, scénaristes, musiciens et techniciens ont façonné
-                    l’univers sombre et inquiétant qui a lancé la saga Vendredi 13.</p>
-            </div>
-            <div>
-                <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/Betsy_p.webp"
-                            alt="Betsy Palmer">
-                        <h3 class="font-bold text-xl text-gray-900">Betsy Palmer</h3>
-                        <p class="text-gray-500">Pamela Voorhees (actrice)</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Antagoniste du film, mère vengeresse de Jason. Son rôle fondateur marque le mythe de Crystal
-                            Lake.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/alice.webp"
-                            alt="Adrienne King">
-                        <h3 class="mt-4 text-xl font-bold text-gray-900">Adrienne King</h3>
-                        <p class="text-gray-500">Alice Hardy (actrice)</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Héroïne et “final girl” iconique, elle incarne la résilience face à la menace.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/kevin.jpg" alt="Kevin Bacon">
-                        <h3 class="mt-4 text-xl font-bold text-gray-900">Kevin Bacon</h3>
-                        <p class="text-gray-500">Jack Burrell (acteur)</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            L’un des moniteurs de Crystal Lake, célèbre pour une scène de meurtre marquante.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/Bill_29.webp"
-                            alt="Harry Crosby">
-                        <h3 class="mt-4 text-xl font-bold text-gray-900">Harry Crosby</h3>
-                        <p class="text-gray-500">Bill (acteur)</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Moniteur du camp, il participe à l’atmosphère anxiogène et au crescendo horrifique.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/sean.webp"
-                            alt="Sean S. Cunningham">
-                        <h3 class="mt-4 text-xl font-bold text-gray-900">Sean S. Cunningham</h3>
-                        <p class="text-gray-500">Réalisateur & Producteur</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Chef d’orchestre du projet, il rassemble l’équipe et donne le ton de la franchise.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/victor.jpg"
-                            alt="Victor Miller">
-                        <h3 class="mt-4 text-xl font-bold text-gray-900">Victor Miller</h3>
-                        <p class="text-gray-500">Scénariste</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Imagine une vengeance maternelle tragique qui ancre l’horreur dans le drame.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/harry.jpg"
-                            alt="Harry Manfredini">
-                        <h3 class="mt-4 text-xl font-bold text-gray-900">Harry Manfredini</h3>
-                        <p class="text-gray-500">Compositeur</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Signe la partition et le motif culte “ki ki ki, ma ma ma” devenu emblème sonore.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-col flex justify-between card max-w-sm bg-white rounded-xl shadow-md overflow-hidden text-center p-6">
-                        <img class="w-32 h-32 mx-auto rounded-lg object-cover" src="images/tom.jpg" alt="Tom Savini">
-                        <h3 class="mt-4 text-xl font-bold text-gray-900">Tom Savini</h3>
-                        <p class="text-gray-500">Effets spéciaux maquillages</p>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Maître du gore réaliste, ses trucages choquent et marquent durablement le public.
-                        </p>
-                        <div class="flex justify-center space-x-4 mt-4 text-black">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr class="mb-20" />
-        <section class="container mx-auto px-4 py-8 space-y-20">
-            <div class="flex gap-20 items-center">
-                <img class="w-140 h-110 object-cover rounded" src="images/scene1.jpeg" alt="Scene 1">
-                <p class="text-xl">On voit l’iconique tueur masqué surgir dans l’ombre, saisissant sa proie par la tête. La victime,
-                    terrifiée, tente de se débattre mais le masque de hockey, désormais indissociable de la saga,
-                    annonce une mort brutale imminente. Cette image illustre parfaitement la terreur sourde et
-                    implacable qui caractérise Vendredi 13.</p>
-            </div>
-            <div class="flex gap-20 items-center">
-                <p class="text-xl">Un moniteur du camp est empalé contre la façade d’une cabane, transpercé de flèches. Le contraste
-                    entre l’environnement banal du camp et la violence extrême de l’attaque choque le spectateur. C’est
-                    une démonstration du réalisme sanglant des effets spéciaux de Tom Savini, qui a marqué durablement
-                    le cinéma d’horreur.</p>
-                <img class="w-140 h-110 object-cover rounded" src="images/scene2.webp" alt="Scene 2">
-
-            </div>
-            <div class="flex gap-20 items-center">
-                <img class="w-140 h-110 object-cover rounded" src="images/scene3.webp" alt="Scene 3">
-                <p class="text-xl">De nuit, sur le sable du camp Crystal Lake, l’héroïne lutte pour sa survie. Elle est plaquée au sol
-                    et étranglée, livrant un combat désespéré contre son agresseur. Cette séquence incarne le duel
-                    ultime entre victime et tueur, un moment de tension extrême où la survie se joue à quelques secondes
-                    près.</p>
-            </div>
-        </section>
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+          <img
+            class="w-full md:w-1/2 rounded object-cover"
+            src="images/scene3.webp"
+            alt="Scene 3"
+          />
+          <p class="text-base md:text-lg w-full md:w-1/2">
+            De nuit, sur le sable du camp Crystal Lake, l’héroïne lutte pour sa
+            survie. Elle est plaquée au sol et étranglée, livrant un combat
+            désespéré contre son agresseur. Cette séquence incarne le duel
+            ultime entre victime et tueur, un moment de tension extrême où la
+            survie se joue à quelques secondes près.
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="mx-auto">
-        <div class="flex justify-between">
-            <div>
-                <a href="tel:416-969-7116">416-969-7116</a>
-                <a href="mailto:Studio_Operations@paramount.com">Studio_Operations@paramount.com</a>
-            </div>
-            <div class="flex justify-between pr-10">
-                <div class="pr-40">
-                    <p>Allyson Lefebvre</p>
-                </div>
-                <div>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
+      <div class="flex justify-between">
+        <div>
+          <a href="tel:416-969-7116">416-969-7116</a>
+          <a href="mailto:Studio_Operations@paramount.com"
+            >Studio_Operations@paramount.com</a
+          >
         </div>
-        <div class="border-b-1 mx-auto pt-5"></div>
-        <div class="pt-5">
-            <p>Cegep de Trois-Rivieres</p>
+        <div class="flex justify-between pr-10">
+          <div class="pr-40">
+            <p>Allyson Lefebvre</p>
+          </div>
+          <div>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
+      </div>
+      <div class="border-b-1 mx-auto pt-5"></div>
+      <div class="pt-5">
+        <p>Cegep de Trois-Rivieres</p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-</body>
-
+  </body>
 </html>
