@@ -6,6 +6,9 @@
     <title>TP2</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="sass/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
   <body>
     <header class="h-20 flex justify-between items-center">
@@ -25,15 +28,18 @@
     </header>
     <main class="mx-auto max-w-9/12">
       <section id="facts">
-        <div class="grid grid-cols-12 items-center">
+        <div class="grid grid-cols-12 row-span-2 items-center">
           <img
-            class="col-span-6 mt-20 mb-20"
+            class="2xl:col-span-6 2xl:row-start-1 col-span-10 col-start-2 row-start-2 2xl:mt-20 mb-20"
             src="images/friday-facts-section.jpg"
             alt="Image de la pochete du film" />
-          <div class="col-span-6 col-start-8 mt-20 mb-20">
+          <div
+            class="2xl:col-span-6 2xl:col-start-8 col-span-12 col-start-1 mt-20 mb-20">
             <div class="flex flex-col mb-10">
-              <h1 class="text-5xl mb-5">Faits divers</h1>
-              <p class="text-xl">
+              <h1 class="text-5xl mb-5 2xl:text-start text-center">
+                Faits divers
+              </h1>
+              <p class="text-xl md:text-2xl lg:text-3xl 2xl:text-xl">
                 Le film a été tourné dans un vrai camp de scouts appelé Camp
                 No-Be-Bo-Sco dans le New Jersey. Il est intéressant de noter que
                 le film est librement inspiré par « Halloween » et que le masque
@@ -42,8 +48,8 @@
                 caméra, ce qui a causé une certaine controverse.
               </p>
             </div>
-            <div class="flex flex-row justify-between start mb-10">
-              <div class="flex flex-col">
+            <div class="flex sm:flex-row flex-col justify-between start mb-10">
+              <div class="flex flex-col 2xl:text-start text-center">
                 <div class="mb-5">
                   <h2 class="text-5xl mb-2">39.7 M</h2>
                   <p class="text-l">Dollars au box office</p>
@@ -53,60 +59,64 @@
                   <p class="text-l">Hourly active users</p>
                 </div>
               </div>
-              <div class="flex flex-col">
+              <div class="flex flex-col 2xl:text-start text-center">
                 <div class="mb-5">
                   <h2 class="text-5xl mb-2">550 000 USD</h2>
                   <p class="text-l">Budget</p>
                 </div>
-
                 <div class="mb-5">
                   <h2 class="text-5xl mb-2">9 Mai 1980</h2>
                   <p class="text-l">Date de sortie</p>
                 </div>
               </div>
             </div>
-            <a
-              class="border rounded-md p-3 hover:bg-stone-800"
-              href="#presentation"
-              >En savoir plus</a
-            >
+            <div class="flex justify-center">
+              <a
+                class="bg-red-700 text-white font-bold rounded-md p-3 hover:bg-stone-800"
+                href="#presentation"
+                >En savoir plus</a
+              >
+            </div>
           </div>
         </div>
       </section>
       <hr class="mb-20" />
+
       <section id="gallery">
-        <div class="grid grid-cols-12 grid-rows-2 gap-10 mb-20">
+        <div
+          class="grid grid-cols-12 grid-rows-6 md:grid-rows-3 2xl:grid-rows-2 gap-10 mb-20">
           <img
-            class="col-span-4"
+            class="col-span-12 md:col-span-6 2xl:col-span-4 w-full"
             src="images/tournage_1.jpg"
             alt="Robbi Morgan qui se fait maquiller" />
           <img
-            class="col-span-4"
+            class="col-span-12 md:col-span-6 2xl:col-span-4 w-full"
             src="images/tournage_2.jpg"
             alt="Un maniquain en préparation" />
           <img
-            class="col-span-4"
+            class="col-span-12 md:col-span-6 2xl:col-span-4 w-full"
             src="images/tournage_3.jpg"
             alt="Betsy Palmer qui se fait maquiller par Tom Savini" />
           <img
-            class="col-span-4"
+            class="col-span-12 md:col-span-6 2xl:col-span-4 w-full"
             src="images/tournage_4.jpg"
             alt="Plusieurs acteurs pendant une scène" />
           <img
-            class="col-span-4"
+            class="col-span-12 md:col-span-6 2xl:col-span-4 w-full"
             src="images/tournage_5.jpg"
             alt="Adrienne King et Betsy Palmer qui rit" />
           <img
-            class="col-span-4"
+            class="col-span-12 md:col-span-6 2xl:col-span-4 w-full"
             src="images/tournage_6.png"
             alt="Jeannine Taylor et Mark Nelson qui tournent une scène" />
         </div>
       </section>
       <hr />
+
       <section id="presentation">
         <div class="grid grid-cols-12 mt-20">
           <div class="col-span-8 col-start-3 flex items-center flex-col mb-10">
-            <h1 class="text-5xl mb-5">
+            <h1 class="text-5xl mb-5 text-center">
               Presentation de la direction artistique
             </h1>
             <p class="text-center text-xl">
@@ -119,9 +129,9 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-row justify-between mb-10">
-          <div class="flex flex-col w-full mr-5">
-            <div class="py-5 border rounded-md my-5">
+        <div class="flex flex-col lg:flex-row justify-between mb-10 gap-5">
+          <div class="flex flex-col w-full gap-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -150,7 +160,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -178,7 +188,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -206,7 +216,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -237,7 +247,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -267,8 +277,8 @@
               </details>
             </div>
           </div>
-          <div class="flex flex-col w-full ml-5">
-            <div class="py-5 border rounded-md my-5">
+          <div class="flex flex-col w-full gap-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -299,7 +309,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -327,7 +337,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -355,7 +365,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -384,7 +394,7 @@
                 </p>
               </details>
             </div>
-            <div class="py-5 border rounded-md my-5">
+            <div class="py-5 border rounded-md">
               <details class="group mx-5">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -418,16 +428,17 @@
       </section>
     </main>
 
-    <footer class="mx-auto">
-      <div class="flex justify-between">
-        <div>
-          <a href="tel:416-969-7116">416-969-7116</a>
+    <footer class="mx-auto max-w-9/12">
+      <div class="flex flex-col justify-between items-center lg:flex-row">
+        <div class="flex flex-col lg:flex-row items-center lg:gap-1">
+          <a class="mb-5 lg:mb-0" href="tel:416-969-7116">416-969-7116</a>
           <a href="mailto:Studio_Operations@paramount.com"
             >Studio_Operations@paramount.com</a
           >
         </div>
-        <div class="flex justify-between pr-10">
-          <div class="pr-40">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between lg:pr-10">
+          <div class="lg:pr-10 2xl:pr-40 my-5">
             <p>Jérémy Rioux</p>
           </div>
           <div>
@@ -439,7 +450,7 @@
         </div>
       </div>
       <div class="border-b-1 mx-auto pt-5"></div>
-      <div class="pt-5">
+      <div class="flex justify-center lg:justify-start mb-5 pt-5">
         <p>Cegep de Trois-Rivieres</p>
       </div>
     </footer>
