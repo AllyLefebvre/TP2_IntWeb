@@ -4,6 +4,10 @@ $coul-blue: #1A2A40;
 $coul-grey: #B0B0B0;
 $coul-green: #2F4F2F;
 
+:root {
+  --couleur-green: #2F4F2F;
+}
+
 @font-face {
   font-family: "friday";
   src: url("/fonts/Friday13v12.ttf") format("truetype");
@@ -49,8 +53,4 @@ h1 {
 
 .card p {
     color: $coul-grey;
-}
-
-.button {
-    background-color: $coul-green;
 }

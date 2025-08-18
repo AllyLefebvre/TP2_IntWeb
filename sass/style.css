@@ -1,3 +1,7 @@
+:root {
+  --couleur-green: #2F4F2F;
+}
+
 @font-face {
   font-family: "friday";
   src: url("/fonts/Friday13v12.ttf") format("truetype");
@@ -41,8 +45,4 @@ h1 {
 
 .card p {
   color: #B0B0B0;
-}
-
-.button {
-  background-color: #2F4F2F;
 }/*# sourceMappingURL=style.css.map */
